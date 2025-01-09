@@ -36,16 +36,16 @@ python disk_usage_analyzer.py
 D:\\My Adventures
 ```
 
-##🖼️ Visual Outputs
-1. Pie Chart: Displays the percentage of storage used by each file type.
-2. Bar Chart: Highlights the largest folders in the analyzed directory.
+## 🖼️ Visual Outputs
+1. **Pie Chart**: Displays the percentage of storage used by each file type.
+2. **Bar Chart**: Highlights the largest folders in the analyzed directory.
 
-##💡 Why Use This?
+## 💡 Why Use This?
 - Quickly identify which file types are hogging your storage.
 - Understand folder sizes at a glance.
 - Keep your drives clean and organized with minimal effort.
 
-##⚠️ Notes
+## ⚠️ Notes
 - Ensure you have matplotlib installed before running the script.
 - For large directories, the analysis may take some time.
 

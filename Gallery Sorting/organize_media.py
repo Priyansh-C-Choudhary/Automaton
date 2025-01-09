@@ -22,15 +22,16 @@ video_extensions = {".mp4", ".avi", ".mov", ".mkv"}
 register_heif_opener()
 
 # Function to get the creation date
-def get_file_date(file_path):
+def get_file_date(file_path, ext):
     try:
-        # Try reading EXIF data for photos
-        if Path(file_path).suffix.lower() in photo_extensions:
+        # Use EXIF data for standard photo formats
+        if ext in {".jpg", ".jpeg", ".png", ".bmp", ".gif"}:
             with Image.open(file_path) as img:
                 exif_data = img._getexif()
                 if exif_data and 36867 in exif_data:
                     return datetime.strptime(exif_data[36867], "%Y:%m:%d %H:%M:%S")
-        # Fall back to file creation time
+        
+        # Fall back to file modification time for HEIC and other files
         return datetime.fromtimestamp(os.path.getmtime(file_path))
     except Exception as e:
         print(f"Error reading date for {file_path}: {e}")
@@ -44,7 +45,7 @@ for root, dirs, files in os.walk(source_dir):
 
         # Check if the file is a photo or video
         if ext in photo_extensions or ext in video_extensions:
-            date = get_file_date(file_path)
+            date = get_file_date(file_path, ext)
             if date:
                 # Create year/month folder
                 year_month_folder = date.strftime("%Y-%m")

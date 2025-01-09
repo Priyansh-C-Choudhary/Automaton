@@ -14,7 +14,9 @@ A super chill script to organize your messy photos and videos into year/month fo
   ```
   source_dir = ""  # Change this to your source folder
   destination_dir = ""  # Change this to your destination folder
-
+  ```
+  Example: 
+  ```
   Example: destination_dir = "D:/My Adventures/Trial/Organized"
   ```
 4. Run the script: Just fire up the script in your Python environment, and boom! Your files will be neatly organized.

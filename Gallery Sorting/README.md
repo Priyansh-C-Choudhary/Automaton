@@ -15,7 +15,7 @@ A super chill script to organize your messy photos and videos into year/month fo
   source_dir = ""  # Change this to your source folder
   destination_dir = ""  # Change this to your destination folder
   ```
-  Example: 
+- Example: 
   ```
   Example: destination_dir = "D:/My Adventures/Trial/Organized"
   ```

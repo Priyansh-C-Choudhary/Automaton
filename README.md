@@ -1,2 +1,2 @@
 # Automaton
-Automatic the Boring Stuff.
+Automating the Boring Stuff.
